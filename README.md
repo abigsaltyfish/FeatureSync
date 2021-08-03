@@ -9,9 +9,9 @@ How to Build
 
 2.cd rsync build a rsync
 
-3.cd enc build a tar
+3.cd tar & enc moduel build a tar
 
-4.then look example,and you should firstly setting rsync
+4.then look the example, and you should firstly setting rsync
 
 How to Setting Rsync
 
