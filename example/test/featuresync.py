@@ -13,7 +13,10 @@ os.system(tar_cmd)
 
 t2 = time.time()
 
-sync_cmd = "rsync -rvz test.tar rsync_backup@" + ip + "::server --password-file=../rsync.password"
+if isdispersed(filename):
+	sync_cmd = "rsync -rvz -B 700 test.tar rsync_backup@" + ip + "::server --password-file=../rsync.password"
+else:
+	sync_cmd = "rsync -rvz test.tar rsync_backup@" + ip + "::server --password-file=../rsync.password"
 os.system(sync_cmd)
 
 t3 = time.time()
